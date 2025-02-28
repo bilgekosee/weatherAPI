@@ -62,3 +62,23 @@
   border-radius: 30px;
   background-color: #0b698b;
 }
+.weather-other-data {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+}
+.weather-other-data-wrapper {
+  width: 103px;
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #7fdff4, #0396a6);
+  border-radius: 20px;
+}
+.weather-other-data-wrapper span {
+  font-size: 10px;
+  font-weight: normal;
+}

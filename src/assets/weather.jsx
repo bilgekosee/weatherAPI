@@ -22,6 +22,32 @@ const Weather = () => {
 
         <span className="degree">22°</span>
       </div>
+      <div className="weather-other-data">
+        <div className="weather-other-data-wrapper">
+          <img src="./Temperature.svg" />
+          <span>Temperature Left</span>
+        </div>
+        <div className="weather-other-data-wrapper">
+          <img src="./Wet.svg" />
+          <span>Temperature Left</span>
+        </div>
+        <div className="weather-other-data-wrapper">
+          <img src="./Mountain.svg" />
+          <span>Temperature Left</span>
+        </div>
+        <div className="weather-other-data-wrapper">
+          <img src="./Wind.svg" />
+          <span>Temperature Left</span>
+        </div>
+        <div className="weather-other-data-wrapper">
+          <img src="./Sun.svg" />
+          <span>Temperature Left</span>
+        </div>
+        <div className="weather-other-data-wrapper">
+          <img src="./Humidity.svg" />
+          <span>Temperature Left</span>
+        </div>
+      </div>
     </div>
   );
 };
