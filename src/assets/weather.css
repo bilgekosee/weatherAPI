@@ -1,14 +1,64 @@
 .weather-container {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("/back.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
 }
 .weather-city-state {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.weather-city {
+  font-size: 50px;
+  font-weight: bold;
+}
+.weather-status {
+  font-size: 18px;
+  color: rgb(183, 181, 177);
+}
+.weather-degree {
+  font-size: 60px;
+  font-weight: normal;
+}
+.pm-weather {
+  display: flex;
+  flex-direction: column;
+}
+.pmIcon-container {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #132f5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pm-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  padding-top: 5px;
+}
+.clock {
+  font-size: 15px;
+  font-weight: bold;
+  color: #7fdff4;
+}
+.degree {
+  font-size: 20px;
+  font-weight: bold;
+  color: #7fdff4;
+}
+.pm-weather {
+  width: 60px;
+  height: 146px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #0b698b;
 }

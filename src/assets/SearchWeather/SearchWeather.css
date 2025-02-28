@@ -1,0 +1,46 @@
+.search-weather-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 338px;
+  height: 207px;
+  background-image: url("./back.png");
+}
+.search-weather-container {
+  display: flex;
+  justify-content: center;
+}
+.gridone {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.gridone-degree {
+  font-size: 64px;
+  font-weight: normal;
+  text-align: left;
+}
+.gridone-status {
+  font-size: 13px;
+  text-align: left;
+}
+.gridthree {
+  display: flex;
+  padding-left: 20px;
+}
+.gridthree-location {
+  font-size: 18px;
+  position: relative;
+  bottom: 20px;
+  font-weight: 600;
+}
+.gridfour {
+  display: flex;
+  justify-content: end;
+}
+.gridfour span {
+  font-size: 18px;
+  position: relative;
+  bottom: 20px;
+  right: 15px;
+  font-weight: 600;
+}

@@ -14,6 +14,14 @@ const Weather = () => {
           <img src="../rain.png"></img>
         </div>
       </div>
+      <div className="pm-weather">
+        <span className="clock">7PM</span>
+        <div className="pmIcon-container">
+          <img src="./rüzgarlı.png" className="pm-icon" />
+        </div>
+
+        <span className="degree">22°</span>
+      </div>
     </div>
   );
 };
