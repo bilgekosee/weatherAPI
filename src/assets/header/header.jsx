@@ -54,7 +54,7 @@ const Header = () => {
           />
         </div>
       </div>
-      <>{showSearchWeather && <SearchWeather />}</>
+      {showSearchWeather && <SearchWeather city={searchTerm} />}
     </>
   );
 };
