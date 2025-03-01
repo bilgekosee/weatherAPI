@@ -1,46 +1,80 @@
+.weather-button {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search-weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .search-weather-wrapper {
   display: grid;
   grid-template-columns: auto auto;
   width: 338px;
   height: 207px;
   background-image: url("./back.png");
+  justify-items: center;
+  align-items: center;
 }
-.search-weather-container {
-  display: flex;
-  justify-content: center;
-}
+
 .gridone {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-right: 40px;
+  justify-content: center;
 }
+
 .gridone-degree {
   font-size: 64px;
   font-weight: normal;
   text-align: left;
 }
+
 .gridone-status {
   font-size: 13px;
   text-align: left;
 }
+
 .gridthree {
   display: flex;
-  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+  max-width: 180px;
 }
+
 .gridthree-location {
   font-size: 18px;
   position: relative;
   bottom: 20px;
   font-weight: 600;
+  text-align: left;
 }
+
 .gridfour {
   display: flex;
   justify-content: end;
+  margin-top: 20px;
 }
+
 .gridfour span {
   font-size: 18px;
   position: relative;
   bottom: 20px;
   right: 15px;
   font-weight: 600;
+}
+
+.gridtwo-icon {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  right: 54px;
+  bottom: 22px;
 }
