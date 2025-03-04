@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
 import { LayoutGrid, Bell, MapPin, Search } from "lucide-react";
 import CustomizedSwitches from "./CustomSwitch";
@@ -7,6 +7,30 @@ import SearchWeather from "../SearchWeather/SearchWeather";
 const Header = () => {
   const [showSearchWeather, setShowSearchWeather] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=20bb422aef46d94994dc3894d6281843`
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              const city = data.name;
+              const country = data.sys.country;
+              setLocation(`${city}, ${country}`);
+            })
+            .catch((error) => console.log("error fetching location", error));
+        },
+        (error) => console.log(error)
+      );
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }, []);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && searchTerm.trim() !== "") {
@@ -27,7 +51,7 @@ const Header = () => {
             </div>
             <div className="location-icon">
               <MapPin size={20} />
-              Tokyo, Japan
+              {location}
             </div>
           </div>
         </div>
