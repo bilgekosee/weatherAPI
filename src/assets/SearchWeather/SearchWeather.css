@@ -1,11 +1,16 @@
 .weather-button {
   background: none;
+  width: 400px;
+}
+.weather-button:hover {
+  border: 1px solid #0b698b;
+}
+.main-container-weather {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
-
 .search-weather-container {
   display: flex;
   justify-content: center;
@@ -39,7 +44,6 @@
 
 .gridone-status {
   font-size: 13px;
-  text-align: left;
 }
 
 .gridthree {
@@ -72,7 +76,7 @@
 }
 
 .gridtwo-icon {
-  width: 150px;
+  width: 100px;
   height: 100px;
   position: relative;
   right: 54px;

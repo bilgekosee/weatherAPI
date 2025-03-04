@@ -23,6 +23,7 @@ const SearchWeather = ({ city }) => {
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.cod === "404") {
           setError("City not found");
           setLoading(false);
@@ -46,7 +47,7 @@ const SearchWeather = ({ city }) => {
   }
 
   return (
-    <>
+    <div className="main-container-weather">
       <button
         className="weather-button"
         onClick={() => weatherData && setShowWeather(true)}
@@ -64,12 +65,15 @@ const SearchWeather = ({ city }) => {
                   </span>
                 </div>
                 <div className="gridtwo">
-                  <img
-                    src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
-                    className="gridtwo-icon"
-                    alt="weather-icon"
-                  />
+                  {weatherData.weather && weatherData.weather[0] && (
+                    <img
+                      src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+                      className="gridtwo-icon"
+                      alt="weather-icon"
+                    />
+                  )}
                 </div>
+
                 <div className="gridthree">
                   <span className="gridthree-location">
                     {weatherData.name}, {weatherData.sys.country}
@@ -89,7 +93,7 @@ const SearchWeather = ({ city }) => {
       </button>
 
       {showWeather && weatherData && <Weather weatherData={weatherData} />}
-    </>
+    </div>
   );
 };
 
