@@ -5,6 +5,9 @@
   justify-content: center;
   margin: 50px;
 }
+.weather-other-data-wrapper span {
+  text-align: center;
+}
 .weather-city-state {
   display: flex;
   justify-content: center;
@@ -72,10 +75,11 @@
 }
 .weather-other-data-wrapper {
   width: 103px;
-  height: 40px;
+  height: 50px;
   padding: 5px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   align-items: center;
   background-image: linear-gradient(to bottom, #7fdff4, #0396a6);
   border-radius: 20px;
@@ -83,4 +87,35 @@
 .weather-other-data-wrapper span {
   font-size: 10px;
   font-weight: normal;
+}
+@media (max-width: 900px) {
+  .weather-other-data-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+  }
+}
+@media (max-width: 780px) {
+  .weather-city {
+    font-size: 40px;
+  }
+  .weather-degree {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 465px) {
+  .weather-other-data {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .weather-other-data-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+  }
 }

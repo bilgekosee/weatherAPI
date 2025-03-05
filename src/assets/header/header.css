@@ -1,7 +1,7 @@
 .header-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px 50px;
 }
 .icons-header {
   display: flex;
@@ -15,7 +15,7 @@
 .responsive {
   display: flex;
   justify-content: space-between;
-  gap: 250px;
+  gap: 500px;
 }
 .icon-header {
   align-items: center;
@@ -64,7 +64,7 @@ input::placeholder {
   height: 30px;
   width: 30px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1433px) {
   .responsive {
     gap: 120px;
   }
@@ -76,6 +76,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
   }
   .responsive {
     gap: 10px;

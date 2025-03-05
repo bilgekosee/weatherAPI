@@ -15,17 +15,15 @@ const Weather = ({ weatherData }) => {
           <span>{weatherData.weather[0].description}</span>{" "}
         </div>
         <div className="weather-degree">{weatherData.main.temp}°</div>{" "}
-        <div className="status-icon">
-          <img
-            src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
-            alt="weather-icon"
-          />
-        </div>
+        <div className="status-icon"></div>
       </div>
       <div className="pm-weather">
         <span className="clock">7PM</span>
         <div className="pmIcon-container">
-          <img src="./rüzgarlı.png" className="pm-icon" alt="Wind icon" />
+          <img
+            src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+            alt="weather-icon"
+          />
         </div>
         <span className="degree">{weatherData.main.temp}°</span>
       </div>
