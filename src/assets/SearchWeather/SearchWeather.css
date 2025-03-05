@@ -24,7 +24,7 @@
   grid-template-columns: auto auto;
   width: 338px;
   height: 207px;
-  background-image: url("./back.png");
+  background-image: url("/back.png");
   justify-items: center;
   align-items: center;
 }
