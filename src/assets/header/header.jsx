@@ -41,31 +41,36 @@ const Header = () => {
   return (
     <>
       <div className="header-container">
-        <div className="header-group-one">
-          <div className="icons-header">
-            <div className="icon-header">
-              <LayoutGrid size={20} />
-            </div>
-            <div className="icon-header">
-              <Bell size={20} />
-            </div>
-            <div className="location-icon">
-              <MapPin size={20} />
-              {location}
+        <div className="responsive">
+          <div className="header-group-one">
+            <div className="icons-header">
+              <div className="icon-header-group">
+                <div className="icon-header">
+                  <LayoutGrid size={20} />
+                </div>
+                <div className="icon-header">
+                  <Bell size={20} />
+                </div>
+              </div>
+
+              <div className="location-icon">
+                <MapPin size={20} />
+                {location}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="header-group-two">
-          <div className="search">
-            <Search className="search-icon" />
-            <input
-              className="search-input"
-              placeholder="Search for a city or airport"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyDown={handleKeyDown}
-            />
+          <div className="header-group-two">
+            <div className="search">
+              <Search className="search-icon" />
+              <input
+                className="search-input"
+                placeholder="Search for a city or airport"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
+            </div>
           </div>
         </div>
 
